@@ -10,22 +10,22 @@ env.read_env()
 load_dotenv()
 
 
-ENGINE = os.getenv("ENGINE")
-HOST = os.getenv("HOST")
-PORT = os.getenv("PORT")
-NAME = os.getenv("NAME")
-USER = os.getenv("USER")
-PASSWORD = os.getenv("PASSWORD")
+DB_ENGINE = os.getenv("DB_ENGINE")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT")
+DB_NAME = os.getenv("DB_NAME")
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 
 DATABASES = {
     'default': {
-        'ENGINE': ENGINE,
-        'HOST': HOST,
-        'PORT': PORT,
-        'NAME': NAME,
-        'USER': USER,
-        'PASSWORD': PASSWORD,
+        'ENGINE': DB_ENGINE,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
     }
 }
 
@@ -35,7 +35,7 @@ ROOT_URLCONF = "project.urls"
 
 ALLOWED_HOSTS = ['*']
 SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = bool(os.getenv("DEBUG"))
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

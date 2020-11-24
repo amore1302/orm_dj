@@ -26,13 +26,13 @@ python manage.py runserver 0.0.0.0:8000
 Перед запуском программы нужно настроить в .env файле параметры среды окружения.
 Без настройки параметров сайт работать не будет.
 Вот эти параметры
-1. ENGINE=
-1. HOST=
-1. PORT=
-1. NAME=
-1. USER=
-1. PASSWORD=
-1. SECRET_KEY=
+1. DB_ENGINE=
+1. DB_HOST=
+1. DB_PORT=
+1. DB_NAME=
+1. DB_USER=
+1. DB_PASSWORD=
+1. DB_SECRET_KEY=
 
 ### Цель проекта
 
